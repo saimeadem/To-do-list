@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: #FBEAEB;
+    padding: 10PX;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.image{
+    width: 100%;
+    margin-left: 100px;
+    max-width: 500px;
+    padding-top: 50px;
+   
+}
+.todo-app{
+    width: 100%;
+    background: #2f3c7e;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    margin: 20px 100px 20px 50px;
+    max-width: 700px;
+}
+.todo-app h2{
+    color: #FBEAEB;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+.row{
+    display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background: #FBEAEB;
+   border-radius: 30px;
+   padding-left: 20px;
+   margin-bottom: 25px;
+   
+   
+
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 10px;
+    font-weight: 14px;
+
+
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ed500a;
+    border-radius: 40px;
+    color: #FBEAEB;
+    font-size: 16px;
+    cursor: pointer;
+
+
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    color:  #FBEAEB;
+
+}
+ul li::before{
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(img/radio-button.png);
+    background-size: cover;
+    background-position: center;
+    top:10px;
+    left:8px;
+
+
+}
+ul li.checked{
+    color: #FBEAEB;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(img/check\ 2.png);
+}
+
+.footer{
+    grid-column-start:1;
+    grid-column-end:3;
+
+}
+.footer p{
+    background-color: #2f3c7e;
+    color: #FBEAEB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: small;
+    padding: 50px 0px 20px 0;
+
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color:#FBEAEB;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    transition:all .3s ease;
+
+}
+ul li span:hover{
+    background: #8f9cde;
+}
+
+
+@media screen and (max-widht:1024px) {
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    img{
+        align-self: center;
+        width: 450px;
+    }
+    .todo-app{
+        margin: 0;
+        width: 450px;
+    }
+    button {
+        padding: 10px 30px;
+        background: #ed500a;
+        border-radius: 40px;
+        color: #FBEAEB;
+        font-size: 15px;
+
+    }
+    
+}
+@media screen and (max-widht:600px) {
+    .container{
+        width: 100%;
+
+    }
+    .image{
+        width: 350px;
+        margin-right: 100px;
+    }
+    img{
+        width: 350px;
+
+    }
+    .todo-app{
+        width: 350px;
+    }
+}
+
+    button{
+        padding: 10px 20px;
+        background: #ed500a;
+        border-radius: 20px;
+        color: #FBEAEB;
+        font-size: 15px;
+    }
+    
+
+
+   
